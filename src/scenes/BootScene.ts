@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 import { SaveSystem } from '../autoload/SaveSystem';
-import { VIEWPORT } from '../constants';
+import { VIEWPORT, SCENES } from '../constants';
 
 export class BootScene extends Phaser.Scene {
   constructor() {
@@ -25,10 +25,25 @@ export class BootScene extends Phaser.Scene {
       fontFamily: 'monospace',
     }).setOrigin(0.5);
 
-    this.add.text(cx, VIEWPORT.HEIGHT - 12, '480×270  ·  Phase 0  ·  Phaser+Vite+TS', {
-      fontSize: '6px',
-      color: '#EEF1FF',
+    const prompt = this.add.text(cx, cy + 20, 'TAP TO START', {
+      fontSize: '7px',
+      color: '#FFE075',
       fontFamily: 'monospace',
     }).setOrigin(0.5);
+
+    // Pulse the prompt
+    this.tweens.add({
+      targets: prompt,
+      alpha: 0,
+      duration: 600,
+      ease: 'Sine.easeInOut',
+      yoyo: true,
+      repeat: -1,
+    });
+
+    // Tap or click anywhere to proceed
+    this.input.once('pointerdown', () => {
+      this.scene.start(SCENES.HUB);
+    });
   }
 }
