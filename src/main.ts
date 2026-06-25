@@ -3,7 +3,7 @@ import { BootScene } from './scenes/BootScene';
 import { HubScene } from './scenes/HubScene';
 import { ObbyScene } from './scenes/ObbyScene';
 import { TycoonScene } from './scenes/TycoonScene';
-import { VIEWPORT } from './constants';
+import { VIEWPORT, JESSIE } from './constants';
 
 const config: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
@@ -16,6 +16,13 @@ const config: Phaser.Types.Core.GameConfig = {
     autoCenter: Phaser.Scale.CENTER_BOTH,
     width: VIEWPORT.WIDTH,
     height: VIEWPORT.HEIGHT,
+  },
+  physics: {
+    default: 'arcade',
+    arcade: {
+      gravity: { x: 0, y: JESSIE.GRAVITY },
+      debug: false,
+    },
   },
   scene: [BootScene, HubScene, ObbyScene, TycoonScene],
 };

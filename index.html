@@ -2,23 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <title>Floofblocks — Jessie's World</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     html, body {
       width: 100%;
       height: 100%;
       background: #0B0E14;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      touch-action: none;
     }
+
+    /* Landscape: game fills the full screen via Phaser Scale.FIT */
+    @media (orientation: landscape) {
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #rotate-notice { display: none; }
+    }
+
+    /* Portrait: show rotate prompt, hide canvas */
+    @media (orientation: portrait) {
+      body { display: block; }
+      canvas { display: none !important; }
+      #rotate-notice {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        position: fixed;
+        inset: 0;
+        color: #FF6FB5;
+        font-family: monospace;
+        font-size: 15px;
+        text-align: center;
+        padding: 24px;
+      }
+      #rotate-notice .icon { font-size: 48px; animation: spin 2s ease-in-out infinite alternate; }
+      @keyframes spin { from { transform: rotate(-20deg); } to { transform: rotate(20deg); } }
+      #rotate-notice p { color: #EEF1FF; font-size: 12px; line-height: 1.5; }
+    }
+
     canvas {
       display: block;
       /* Crisp nearest-neighbour upscale in every browser */
@@ -28,6 +59,11 @@
   </style>
 </head>
 <body>
+  <div id="rotate-notice">
+    <div class="icon">📱</div>
+    <strong>Rotate your device</strong>
+    <p>Floofblocks plays in landscape.<br>Turn your phone sideways to continue.</p>
+  </div>
   <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
