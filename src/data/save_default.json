@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "currency": { "acorns": 0 },
+  "player": {
+    "level": 1,
+    "xp": 0,
+    "equipped_skin": "skin_default",
+    "equipped_hat": null,
+    "equipped_tail": null,
+    "abilities": { "double_jump": false, "dash": false }
+  },
+  "obby": { "best_times": {}, "completed_levels": [] },
+  "tycoon": {
+    "last_saved_unix": 0,
+    "plots": [ { "id": 0, "generator_id": null, "decorations": [] } ]
+  },
+  "settings": { "music_vol": 0.7, "sfx_vol": 0.8, "fullscreen": false }
+}

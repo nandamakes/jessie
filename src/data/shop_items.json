@@ -1,0 +1,5 @@
+[
+  { "id": "hat_bandana", "name": "Red Bandana", "type": "hat",  "cost": 50,  "unlock_level": 1 },
+  { "id": "tail_bow",    "name": "Floof Bow",   "type": "tail", "cost": 150, "unlock_level": 2 },
+  { "id": "skin_snow",   "name": "Snow Fox",    "type": "skin", "cost": 500, "unlock_level": 4 }
+]

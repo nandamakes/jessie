@@ -1,0 +1,6 @@
+[
+  { "id": "gen_t1",       "name": "Acorn Sprout", "type": "generator", "cost": 100,  "rate_per_sec": 1,  "unlock_level": 1 },
+  { "id": "gen_t2",       "name": "Acorn Bush",   "type": "generator", "cost": 400,  "rate_per_sec": 4,  "unlock_level": 3 },
+  { "id": "gen_t3",       "name": "Acorn Grove",  "type": "generator", "cost": 1500, "rate_per_sec": 15, "unlock_level": 6 },
+  { "id": "decor_lantern","name": "Paper Lantern","type": "decor",     "cost": 80,   "rate_per_sec": 0,  "unlock_level": 1 }
+]

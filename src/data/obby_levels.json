@@ -1,0 +1,5 @@
+[
+  { "id": "obby_01", "name": "Leafy Start",     "difficulty": 1, "par_time_sec": 60, "base_acorns": 10, "unlock_level": 1 },
+  { "id": "obby_02", "name": "Wobbly Logs",     "difficulty": 2, "par_time_sec": 75, "base_acorns": 15, "unlock_level": 2 },
+  { "id": "obby_03", "name": "Vanishing Trail", "difficulty": 3, "par_time_sec": 90, "base_acorns": 20, "unlock_level": 4 }
+]

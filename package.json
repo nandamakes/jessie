@@ -1,0 +1,18 @@
+{
+  "name": "floofblocks",
+  "version": "0.0.1",
+  "description": "Floofblocks — Jessie's World",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "phaser": "^3.87.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "vite": "^5.4.2"
+  }
+}
